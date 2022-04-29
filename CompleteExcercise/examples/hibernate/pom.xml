@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>edu.miu.cs.cs544</groupId>
+		<artifactId>cs544-examples</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>cs544-hibernate</artifactId>
+	<packaging>pom</packaging>
+
+	<name>cs544-hibernate</name>
+	<description>CS544 - Enterprise Architecture Hibernate Examples</description>
+
+	<modules>
+		<module>hibernate-shared</module>
+		<module>hibernate-00-helloworld</module>
+		<module>hibernate-01-entitymapping</module>
+		<module>hibernate-02-persistence-1</module>
+		<module>hibernate-02-persistence-2</module>
+		<module>hibernate-03-associations-1</module>
+		<module>hibernate-03-associations-2</module>
+		<module>hibernate-03-associations-3</module>
+		<module>hibernate-03-associations-4</module>
+		<module>hibernate-03-associations-5</module>
+		<module>hibernate-03-associations-6</module>
+		<module>hibernate-05-inheritance-1</module>
+		<module>hibernate-05-inheritance-2</module>
+		<module>hibernate-05-inheritance-3</module>
+		<module>hibernate-07-hql-1</module>
+		<module>hibernate-07-hql-2</module>
+		<module>hibernate-07-hql-3</module>
+		<module>hibernate-07-hql-4</module>
+		<module>hibernate-07-hql-5</module>
+		<module>hibernate-07-hql-11</module>
+		<module>hibernate-07-hql-22</module>
+		<module>hibernate-07-hql-33</module>
+		<module>hibernate-07-hql-44</module>
+		<module>hibernate-07-hql-55</module>
+		<module>hibernate-08-concurrenrcy-0</module>
+		<module>hibernate-08-concurrenrcy-1</module>
+		<module>hibernate-08-concurrenrcy-2</module>
+		<module>adventure-works-resource</module>
+		<module>mysql-sakila-resource</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+		
+			<dependency>
+				<groupId>com.microsoft.sqlserver</groupId>
+				<artifactId>mssql-jdbc</artifactId>
+				<version>9.4.0.jre8</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.27</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>5.3.7.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.20</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.version}</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
