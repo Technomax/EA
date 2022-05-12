@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: hosting-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/cs544
+    username: root
+    password: technomax
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximumPoolSize: 10
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  security:
+    user:
+      name: app-user
+      password: c1e3d0fa-5aa8-4be7-83f7-32974dd617bf
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka

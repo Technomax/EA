@@ -6,12 +6,13 @@ import javax.persistence.Embeddable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @Embeddable
+@NoArgsConstructor
 public class AccountEntry {
-	
 	private Date date;
 	private double amount;
 	private String description;

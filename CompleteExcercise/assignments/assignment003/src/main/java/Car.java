@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Table(name="cars")
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
     @Column(nullable = false, length = 100)
@@ -19,7 +19,4 @@ public class Car {
     @Column(precision = 6, scale = 2)
     private double price;
 
-    @ManyToOne
-    @JoinColumn(name = "owner_id")
-    private Owner owner;
 }

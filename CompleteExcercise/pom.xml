@@ -22,18 +22,83 @@
         <module>assignments/assignment004</module>
         <module>assignments/assignment003002</module>
         <module>Practice</module>
-		<module>Practice/practice03</module>
         <module>assignments/assignment005</module>
 		<module>assignments/assignment006</module>
-	</modules>
+		<module>assignments/assignmnt008</module>
+		<module>assignments/assignment11-1</module>
+		<module>assignments/assignment11-2</module>
+        <module>assignments/assignment12-1</module>
+        <module>assignments/assignment13-1</module>
+        <module>assignments/assignment12-2</module>
+		<module>assignments/assignment13-2</module>
+        <module>assignments/assignment16-1</module>
+        <module>assignments/assignment16-2</module>
+        <module>assignments/assignment17-1</module>
+        <module>assignments/assignment17-2</module>
+        <module>assignments/assignment15-1</module>
+        <module>assignments/assignment15-2</module>
+        <module>assignments/exam001</module>
+        <module>assignments/exam002</module>
+        <module>assignments/exam03</module>
+    </modules>
 
 	<properties>
 		<java.version>1.8</java.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.6.7</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.17.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.17.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.1.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot2</artifactId>
+            <version>1.7.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-reactor</artifactId>
+            <version>1.7.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.6.7</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
-	<build>
+    <build>
 		<pluginManagement>
 			<plugins>
 				<plugin>

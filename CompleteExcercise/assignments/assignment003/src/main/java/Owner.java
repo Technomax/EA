@@ -2,14 +2,14 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
-@Table(name="owners")
 public class Owner {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
 
     @Column(nullable = false)
@@ -18,5 +18,7 @@ public class Owner {
     @Column(nullable = true, length=500)
     private String address;
 
-
+    @OneToMany
+    @JoinColumn(name="owner_id")
+    private List<Car> cars= new ArrayList<>();
 }
