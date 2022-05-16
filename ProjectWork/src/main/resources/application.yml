@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: hosting-server
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=cs544ProjectDB
+    username: sa
+    password: technomax
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    hikari:
+      maximumPoolSize: 10
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2016Dialect
+#spring:
+#  application:
+#    name: hosting-server
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/cs544ProjectDB
+#    username: root
+#    password: technomax
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    hikari:
+#      maximumPoolSize: 10
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
